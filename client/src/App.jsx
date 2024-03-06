@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-        <p>Bebe steps</p>
+        <p className='text-4xl underline'>Bebe steps</p>
       </div>
     </>
   )
