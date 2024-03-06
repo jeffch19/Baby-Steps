@@ -15,6 +15,16 @@ const typeDefs = `
         trimester: String
         month: String
     }
+
+    type Query {
+        user: User
+        journel(month: String): Journel
+    }
+
+    type Mutation {
+        addUser(username: String!, email: String!, password: String!): Auth
+        addJournel(title: String!, body: String!, date: Date, image: String, trimester: String, month: String)
+    }
 `;
 
 module.exports = typeDefs;

@@ -12,7 +12,7 @@ const journelSchema = new Schema({
         required: true,
     },
     date: {
-        type: Data
+        type: Date
     },
     image: {
         type: String
