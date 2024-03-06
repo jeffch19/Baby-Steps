@@ -8,10 +8,11 @@ const journelSchema = new Schema({
         required: true,
     },
     body: {
-        type: String
+        type: String,
+        required: true,
     },
-    Date: {
-        type: Data
+    date: {
+        type: Date
     },
     image: {
         type: String
