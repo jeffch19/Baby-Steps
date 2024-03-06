@@ -1,17 +1,17 @@
 import './App.css'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
   return (
     <>
-      <Navbar />
       <main>
-        <div>
-          <p className='text-4xl underline'>Bebe steps</p>
-        </div>
-        <Outlet />
+        <Navbar />
+        <AnimatePresence initial={'false'} mode={'wait'}>
+          <Outlet />
+        </AnimatePresence>
       </main>
     </>
   )

@@ -1,7 +1,15 @@
+import { motion } from 'framer-motion';
 export default function Home() {
     return (
-        <div>
-            <h1>Test page</h1>
-        </div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, duration: 0.5 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}>
+            <div id='mainpage'>
+                <h1 className='text-black text-center pt-8'>My Pregnancy Journal</h1>
+                <p className='text-black text-center'>Where your dreams come true</p>
+            </div>
+        </motion.div>
     )
 }
