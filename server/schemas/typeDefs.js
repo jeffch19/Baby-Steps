@@ -14,6 +14,7 @@ const typeDefs = `
         image: String
         trimester: String
         month: String
+        babyWeight: Number
     }
 
     type Query {
@@ -23,7 +24,7 @@ const typeDefs = `
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): User
-        addJournel(title: String!, body: String!, date: String, image: String, trimester: String, month: String): Journel
+        addJournel(title: String!, body: String!, date: String!, image: String, trimester: String, month: String, babyweight: Number): Journel
     }
 `;
 
