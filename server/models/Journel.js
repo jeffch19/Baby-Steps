@@ -12,7 +12,8 @@ const journelSchema = new Schema({
         required: true,
     },
     date: {
-        type: Date
+        type: Date,
+        required: true,
     },
     image: {
         type: String
@@ -22,7 +23,10 @@ const journelSchema = new Schema({
     },
     month: {
         type: String
-    }
+    },
+    babyWeight: {
+        type: Number
+      }
 });
 
 const Journel = mongoose.model('Journel', journelSchema)
