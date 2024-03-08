@@ -22,7 +22,7 @@ const userSchema = new Schema(
       required: true,
     },
     // set to be an array of data that adheres to the journelSchema
-    journel: [journelSchema],
+    journel: [journelSchema.schema],
   },
   // set this to use virtual below
   {
