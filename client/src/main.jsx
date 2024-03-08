@@ -1,7 +1,7 @@
 // import React from 'react'
 import ReactDOM from 'react-dom/client'
 import React from 'react';
-import { createBrowserRouter, RouterProvider, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx'
 // import Home from './pages/Home';
 // import Error from './pages/Error';

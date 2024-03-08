@@ -1,9 +1,10 @@
 import './App.css'
-import { Outlet, useLocation, Routes, Route } from 'react-router-dom'
+import { useLocation, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Error from './pages/Error';
 import Journal from './pages/Journal';
+import Footer from './components/Footer';
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path='*' element={<Error />}/>
           </Routes>
         </AnimatePresence>
+        <Footer />
       </main>
     </>
   )
