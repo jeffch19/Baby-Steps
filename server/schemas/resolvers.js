@@ -3,22 +3,19 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
    Query: {
-        journel: async ( {month}) => {
-            const params = {};
+        // journel: async ( {month}) => {
+        //     const params = {};
 
-            if (month) {
-                params.month = month
-            }
+        //     if (month) {
+        //         params.month = month
+        //     }
 
-            return await Journel.find(params)
-        },
+        //     return await Journel.find(params)
+        // },
         user: async (parent, args, context) => {
             if (context.user) {
 
-                const user = await User.findById(context.user._id).populate({
-                    path: 'user.journel',
-                    populate: 'journel',
-                });
+                const user = await User.findById(context.user._id).populate('journel');
 
                 return user;
             }
