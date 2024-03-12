@@ -26,7 +26,11 @@ const journelSchema = new Schema({
     },
     babyWeight: {
         type: Number
-      }
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 const Journel = mongoose.model('Journel', journelSchema)

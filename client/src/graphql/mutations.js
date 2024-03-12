@@ -28,7 +28,7 @@ mutation Mutation($title: String!, $body: String!, $date: String!, $image: Strin
 `;
 
 export const LOGIN = gql`
-  mutation login($email: String!, $password: String!) {
+  mutation Mutation($email: String!, $password: String!) {
     login(email: $email, password: $password) {
       token
       user {

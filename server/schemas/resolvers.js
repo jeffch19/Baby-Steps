@@ -30,8 +30,9 @@ const resolvers = {
 
             return { token, user };
         },
-        addJournel: async (parent, args) => {
-            const journel = await Journel.create(args);
+        addJournel: async (parent, args, context) => {
+            const journel = await Journel.create({...args, user: context.user._id});
+            await User.findByIdAndUpdate(context.user._id, {$push: {journel: journel._id}})
 
             return journel
         },
