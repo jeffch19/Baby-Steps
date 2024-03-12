@@ -2,6 +2,7 @@ import './App.css'
 import { Outlet, useLocation, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Footer from './components/Footer';
 import Error from './pages/Error';
 import Journal from './pages/Journal';
 import { AnimatePresence } from 'framer-motion';
@@ -20,6 +21,7 @@ function App() {
           </Routes>
         </AnimatePresence>
       </main>
+      <Footer />
     </>
   )
 }
