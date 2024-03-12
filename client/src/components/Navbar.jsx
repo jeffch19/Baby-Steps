@@ -11,6 +11,9 @@ export default function Navbar() {
                 <li>
                     <Link to="/journal" className='mx-2'>Journal</Link>
                 </li>
+                <li>
+                    <Link to="/calendar" className='mx-2'>Calendar</Link>
+                </li>
             </ul>
             <Link to='/login' className='mx-2'>Login</Link>
         </div>

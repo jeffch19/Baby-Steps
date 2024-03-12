@@ -1,13 +1,12 @@
-import React from 'react';
+// import React from 'react';
 import Calendar from 'react-calendar';
-// import 'react-calendar/dist/Calendar.css'; // Import the CSS for the calendar
+import 'react-calendar/dist/Calendar.css'; 
+//Import the CSS for the calendar
 
-const CalendarComponent = () => {
+export default function CalendarComponent () {
  return (
-    <div>
+    <div className='grid justify-items-center mx-auto text-black'>
       <Calendar />
     </div>
  );
-};
-
-export default CalendarComponent;
+}

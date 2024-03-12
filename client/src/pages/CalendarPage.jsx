@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import JournalCard from '../components/JournalCard';
-
-export default function Journal() {
+import CalendarComponent from '../components/Calendar';
+export default function CalendarPage() {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -9,8 +8,7 @@ export default function Journal() {
             exit={{ opacity: 0, duration: 0.3 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}>
             <div className='mainpage'>
-                <h1 className='text-black text-center pt-8'>Da journal</h1>
-                <JournalCard />
+                <CalendarComponent />
             </div>
         </motion.div>
     )
