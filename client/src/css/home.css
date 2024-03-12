@@ -1,0 +1,28 @@
+/* Home.css */
+
+.mainpage {
+    /* Set background image */
+    background-image: url('../assets/pastelBackground.png'); /* Adjust the path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    height: 100vh; /* Set height to full viewport height */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* Additional styles for text */
+  .mainpage h1 {
+    margin-top: 80px;
+    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive; 
+    font-size: 3rem; /* Example font size */
+    font-weight: bolder;
+    color: black; /* Example text color */
+  }
+  
+  .mainpage p {
+    font-size: 1.5rem; /* Example font size */
+    color: black; /* Example text color */
+  }
+  
