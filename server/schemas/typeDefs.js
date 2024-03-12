@@ -15,6 +15,7 @@ const typeDefs = `
         trimester: String
         month: String
         babyWeight: Int
+        user: User
     }
 
     type Auth {
