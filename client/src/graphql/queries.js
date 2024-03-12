@@ -1,13 +1,12 @@
 import { gql } from '@apollo/client';
 
 export const GET_USER_AND_JOURNAL = gql`
- query GetUserAndJournal {
-    me {
+  query Query {
+    user {
       _id
       username
       email
       journel {
-        _id
         title
         body
         date
@@ -17,5 +16,5 @@ export const GET_USER_AND_JOURNAL = gql`
         babyWeight
       }
     }
- }
+  }
 `;
