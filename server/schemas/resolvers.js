@@ -3,22 +3,19 @@ const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
    Query: {
-        journel: async ( {month}) => {
-            const params = {};
+        // journel: async ( {month}) => {
+        //     const params = {};
 
-            if (month) {
-                params.month = month
-            }
+        //     if (month) {
+        //         params.month = month
+        //     }
 
-            return await Journel.find(params)
-        },
+        //     return await Journel.find(params)
+        // },
         user: async (parent, args, context) => {
             if (context.user) {
 
-                const user = await User.findById(context.user._id).populate({
-                    path: 'user.journel',
-                    populate: 'journel',
-                });
+                const user = await User.findById(context.user._id).populate('journel');
 
                 return user;
             }
@@ -38,6 +35,23 @@ const resolvers = {
 
             return journel
         },
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+      
+            if (!user) {
+              throw AuthenticationError;
+            }
+      
+            const correctPw = await user.isCorrectPassword(password);
+      
+            if (!correctPw) {
+              throw AuthenticationError;
+            }
+      
+            const token = signToken(user);
+      
+            return { token, user };
+          }
    }, 
 };
 

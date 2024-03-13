@@ -17,14 +17,20 @@ const typeDefs = `
         babyWeight: Int
     }
 
+    type Auth {
+        token:ID
+        user: User
+    }
+
     type Query {
         user: User
         journel(month: String): Journel
     }
 
     type Mutation {
-        addUser(username: String!, email: String!, password: String!): User
+        addUser(username: String!, email: String!, password: String!): Auth
         addJournel(title: String!, body: String!, date: String!, image: String, trimester: String, month: String, babyWeight: Int): Journel
+        login(email: String!, password: String!): Auth
     }
 `;
 

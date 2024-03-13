@@ -2,10 +2,11 @@ import './App.css'
 import { useLocation, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Footer from './components/Footer';
 import Error from './pages/Error';
 import Journal from './pages/Journal';
 import CalendarPage from './pages/CalendarPage';
-import Footer from './components/Footer';
+
 import { AnimatePresence } from 'framer-motion';
 
 function App() {
