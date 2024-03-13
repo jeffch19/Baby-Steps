@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "../css/loginsignup.css";
 import { Link } from "react-router-dom";
@@ -7,6 +7,26 @@ import babysteps_logo from "../assets/pink_logo.png";
 import bouquet from "../assets/bouquetRight.png";
 
 const Signup = () => {
+  const [name, setName] = useState('');
+  const [date, setDate] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const [passwordError, setPasswordError] = useState('');
+
+  const onButtonClick = () => {
+  };
+
+  const validatePasswords = () => {
+    if (confirmPassword !== "" && password !== confirmPassword) {
+      setPasswordError("Passwords do not match. Try again.")
+    }
+    else {
+      setPasswordError("")
+    }
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -57,6 +77,7 @@ const Signup = () => {
                     autoComplete="given-name"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    onChange={(value) => setName(value.target.value)}
                   />
                 </div>
               </div>
@@ -77,6 +98,7 @@ const Signup = () => {
                     type="date"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    onChange={value => setDate(value.target.value)}
                   />
                 </div>
               </div>
@@ -96,6 +118,7 @@ const Signup = () => {
                     autoComplete="email"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    onChange={value => setEmail(value.target.value)}
                   />
                 </div>
               </div>
@@ -105,6 +128,7 @@ const Signup = () => {
                   <label
                     htmlFor="password"
                     className="block text-sm font-medium leading-6 text-gray-900"
+                    onChange={value => setPassword(value.target.value)}
                   >
                     Password
                   </label>
@@ -117,6 +141,7 @@ const Signup = () => {
                     autoComplete="current-password"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    onChange={value => setPassword(value.target.value)}
                   />
                 </div>
               </div>
@@ -138,14 +163,22 @@ const Signup = () => {
                     autoComplete="current-password"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                    onChange={value => setConfirmPassword(value.target.value)}
+                    onInput={validatePasswords}
                   />
                 </div>
+                <label
+                    className="block text-sm font-medium leading-6 text-gray-900"
+                  >
+                    {passwordError}
+                  </label>
               </div>
 
               <div>
                 <button
-                  type="submit"
+                  type="button"
                   className="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 blue"
+                  onClick={onButtonClick}
                 >
                   Sign up
                 </button>
