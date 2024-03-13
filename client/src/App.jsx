@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Error from './pages/Error';
 import Journal from './pages/Journal';
 import Login from './pages/Login';
+import JournalView from './pages/JournalView';
 import { AnimatePresence } from 'framer-motion';
 import Signup from './pages/Signup';
 
@@ -22,6 +23,7 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={< Signup/>} />
             <Route path='*' element={<Error />}/>
+            <Route path='/journalview' element={<JournalView/>} />
           </Routes>
         </AnimatePresence>
       </main>
