@@ -6,14 +6,16 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import './App.css'
-import { Outlet, useLocation, Routes, Route } from 'react-router-dom'
+import { useLocation, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer';
 import Error from './pages/Error';
 import Journal from './pages/Journal';
+import CalendarPage from './pages/CalendarPage';
 import Login from './pages/Login';
 import JournalView from './pages/JournalView';
+
 import { AnimatePresence } from 'framer-motion';
 import Signup from './pages/Signup';
 
@@ -50,12 +52,14 @@ function App() {
           <Routes key={location.pathname} location={location}>
             <Route path='/' element={<Home />}/>
             <Route path='/journal' element={<Journal />}/>
+            <Route path='/calendar' element={<CalendarPage />}/>
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={< Signup/>} />
             <Route path='*' element={<Error />}/>
             <Route path='/journalview' element={<JournalView/>} />
           </Routes>
         </AnimatePresence>
+        <Footer />
       </main>
       <Footer />
     </ApolloProvider>

@@ -10,7 +10,7 @@
   background-position: 50% 30%;
   background-size: cover;
   width: 100%;
-  height: 94vh; /*footer will also be 3vh*/
+  min-height: 94vh; /*footer will also be 3vh*/
 }
 
 

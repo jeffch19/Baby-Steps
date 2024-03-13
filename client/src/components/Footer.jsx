@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import bouquetLeft from '../assets/bouquetLeft.png';
 import bouquetRight from '../assets/bouquetRight.png';
 import blueFetus from '../assets/blueFetus.png';
