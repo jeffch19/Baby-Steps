@@ -61,8 +61,8 @@ function App() {
         </AnimatePresence>
         <Footer />
       </main>
-     </ApolloProvider>
+    </ApolloProvider>
   )
 }
 
-export default App
+export default App;
