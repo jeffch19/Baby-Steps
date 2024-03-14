@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-image: url(../assets/pastelBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input {
+    padding: 0.5rem !important;
+}
+
+div.header {
+    background-color: #e4e8d9;
+    width: 80%;
+    left: 10%;
+    position: relative;
+}
+
+img.header {
+    width: 6rem;
+    object-fit: scale-down;
+    margin-left: -4rem;
+    margin-right: -4rem;
+}
+
+img.header#flipped {
+    transform: scaleX(-1);
+}
+
+.logo {
+    margin-top: 2rem;
+    width: 6rem;
+    height: auto;
+}
+
+#card {
+    background-color: #fefef4;
+    border: #abc1d6 0.20rem solid;
+    border-radius: 1rem;
+    position: relative;
+}
+
+a.blue {
+    color: #5d88b0;
+}
+
+button.blue {
+    background-color: #abc1d6;
+}
+
+button.blue:hover {
+    background-color: #5d88b0;
+}
+
+a.blue:hover {
+    color: #3e5f7f;
+}
