@@ -61,7 +61,8 @@ function App() {
         </AnimatePresence>
         <Footer />
       </main>
-    </ApolloProvider>
+     </ApolloProvider>
+
   )
 }
 
