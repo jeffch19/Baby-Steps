@@ -6,7 +6,7 @@ export default function JournalCard() {
     const [formState, setFormState] = useState({
         title: '', date: '', weight: '', months: '', body: ''
     });
-    const [submission, { error, data }] = useMutation(ADD_Journel);
+    const [submission, { error }] = useMutation(ADD_Journel);
 
     const handleFormSubmit = async(e) => {
         e.preventDefault();
@@ -16,13 +16,13 @@ export default function JournalCard() {
                 variables: { ...formState },
             });
             console.log(data);
+            setFormState({
+                title: '', date: '', weight: '', months: '', body: ''
+            });
         }
         catch (e) {
             console.error(e);
         }
-        setFormState({
-            title: '', date: '', weight: '', months: '', body: ''
-        })
     }
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -53,7 +53,7 @@ export default function JournalCard() {
                     </select>
                 </div>
                 <textArea className='w-full bg-white' name='body' placeholder='Type thoughts/events here...' rows='8' onChange={handleChange}/>
-                <button type='submit'>Submit</button>
+                <button type='submit' onClick={handleFormSubmit}>Submit</button>
             </form>
         </div>
     )
