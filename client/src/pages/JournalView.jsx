@@ -5,9 +5,14 @@ function JournalView() {
     const{loading, data} = useQuery(GET_USER_AND_JOURNAL,)
 
     console.log(data)
+
+    const journals = data?.user.journel
+
     return (
         <>
-
+            {journals.map( journal => (
+                <h3>{journal.title}</h3>
+            ))}
         </>
     )
 }
