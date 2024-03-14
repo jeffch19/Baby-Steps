@@ -6,7 +6,7 @@ function JournalView() {
 
     console.log(data)
 
-    const journals = data?.user.journel
+    const journals = data?.user.journel || [];
 
     return (
         <>
