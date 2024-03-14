@@ -1,11 +1,23 @@
+import { ADD_Journel } from "../graphql/mutations";
+import { useState } from 'react';
+import { useMutation } from '@apollo/client';
+
 export default function JournalCard() {
+    const [formState, setFormState] = useState({
+        title: '', date: '', weight: '', months: ''
+    });
+    const [submission, { error, data }] = useMutation(ADD_Journel);
+
+    const handleFormSubmit = async(e) => {
+        e.preventDefault();
+    }
     return (
         <div className='mx-auto w-6/12 text-black my-3 h-[75vh]'>
-            <form>
+            <form onSubmit={handleFormSubmit}>
                 <div className='flex flex-col'>
-                    <input className="my-2 bg-white" placeholder='Title'></input>
-                    <input className="my-2 bg-white" placeholder='Date'></input>
-                    <input className="my-2 bg-white" placeholder='Weight'></input>
+                    <input className="my-2 bg-white" name='title' placeholder='Title'></input>
+                    <input className="my-2 bg-white" name='date' placeholder='Date'></input>
+                    <input className="my-2 bg-white" name='weight' placeholder='Weight'></input>
                     {/* <input list='months'></input> */}
                     <select name='months' className='bg-white my-2 text-black'>
                         <option value='' disabled selected>Select a month</option>
@@ -20,7 +32,7 @@ export default function JournalCard() {
                         <option value="9">9</option>
                     </select>
                 </div>
-                <textArea className='w-full bg-white' placeholder='Type thoughts/events here...' rows='8' />
+                <textArea className='w-full bg-white' name='body' placeholder='Type thoughts/events here...' rows='8' />
                 <button type='submit'>Submit</button>
             </form>
         </div>
