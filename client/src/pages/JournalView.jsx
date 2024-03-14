@@ -12,7 +12,7 @@ function JournalView() {
     console.log(data)
 
 
-    const { journalEntries } = data.user; 
+    const  journalEntries  = data?.user.journel; 
 
     return (
         <>
