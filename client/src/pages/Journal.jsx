@@ -11,7 +11,9 @@ export default function Journal() {
             <div className='mainpage'>
                 <h1 className='text-black text-center pt-8'>Da journal</h1>
                 <JournalCard />
+                {/* <CloudButton /> */}
             </div>
         </motion.div>
+        
     )
 }
