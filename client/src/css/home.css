@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    overflow: hidden;
   }
   
   /* Additional styles for text */
@@ -64,15 +65,15 @@
   }
   
   .rattle {
-    width: 70px; /* Adjust size as needed */
+    width: 50px; /* Adjust size as needed */
     height: 70px;
   }
   
   .bear {
-    width: 100px; /* Adjust size as needed */
-    height: 200px;
+    width: 200px; /* Adjust size as needed */
+    height: auto;
     margin-right: 30px;
-    padding-bottom: 100px; /* Adjust spacing between images */
+    padding-bottom: 0; /* Adjust spacing between images */
   }
    
   

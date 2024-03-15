@@ -1,11 +1,10 @@
 import React from 'react';
 import Background from "../assets/pastelBackground.png";
 import MobileImage from "../assets/mobile.png";
-import CribImage from "../assets/Crib.png";
+import CribImage from "../assets/crib.png";
 import MotherImage from "../assets/mother.png";
 import RattleImage from "../assets/rattle.png";
 import BearImage from "../assets/bear.png";
-import '../css/home.css';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -16,7 +15,7 @@ export default function Home() {
             exit={{ opacity: 0, duration: 0.3 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}>
             <div className='mainpage' style={{ backgroundImage: `url(${Background})` }}>
-                <h1 className='text-black text-center pt-8'>My Pregnancy Journal</h1>
+                <h1 className='text-black text-center pt-8' style={{ fontFamily: 'Lucida Calligraphy' }}>My Pregnancy Journal</h1>
                 <p className='text-black text-center'>Every moment, a precious keepsake.</p>
                 <div className="image-container">
                     <img src={CribImage} alt="Crib" className="crib" />
