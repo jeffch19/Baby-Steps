@@ -11,7 +11,7 @@ const Footer = () => {
         <img src={bouquetLeft} alt="bouquet left" className="footer-icon" />
         <p className="footer-text">Created with</p>
         <img src={blueFetus} alt="blue heart and fetus" className="footer-image" />
-        <p className="footer-text">by JAHZ</p>
+        <p className="footer-text">by JAHVZ</p>
         <img src={bouquetRight} alt="bouquet right" className="footer-icon" />
       </div>
     </footer>
