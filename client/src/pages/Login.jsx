@@ -55,7 +55,7 @@ const Login = () => {
           className="sm:max-w-sm sm:w-full px-6 py-8 h-screen w-screen md:h-auto"
           id="card"
         >
-          <div class="flex flex-auto flex-col">
+          <div className="flex flex-auto flex-col">
             <div className="flex flex-auto flex-row flex-nowrap justify-center content-center header">
               <img src={bouquet} className="header"></img>
               <div className="flex flex-auto flex-col justify-center content-center">
