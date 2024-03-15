@@ -24,18 +24,21 @@
    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive; 
    font-size: 40px; /* Example font size */
    font-weight: bolder;
-   color: black; /* Example text color */
+   color: steelblue; /* Example text color */
 }
  
  .mainpage h2 {
    margin-top: -70px;
    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive; 
-   font-size: larger;
+   font-weight: bolder;
+   font-size: x-large;
+   color: steelblue;
 }
 
  .mainpage p {
    font-size: 20px; /* Example font size */
-   color: black; /* Example text color */
+   font-weight: bolder;
+   color: steelblue;
 }
 
  .image-container {
