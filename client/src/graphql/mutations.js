@@ -13,7 +13,7 @@ export const ADD_USER = gql `
 `;
 
 export const ADD_Journel = gql `
-mutation Mutation($title: String!, $body: String!, $date: String!, $image: String, $trimester: String, $month: String, $babyWeight: Int) {
+mutation Mutation($title: String!, $body: String!, $date: String!, $image: String, $trimester: String, $month: String, $babyWeight: String) {
     addJournel(title: $title, body: $body, date: $date, image: $image, trimester: $trimester, month: $month, babyWeight: $babyWeight) {
       title
       body
