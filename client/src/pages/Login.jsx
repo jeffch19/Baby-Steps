@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import "../css/loginsignup.css";
 import { Link } from "react-router-dom";
 
+import { useMutation } from '@apollo/client';
+import auth from "../utils/auth";
+import { LOGIN } from "../graphql/mutations";
+
 import babysteps_logo from "../assets/pink_logo.png";
 import bouquet from "../assets/bouquetRight.png";
 
@@ -10,8 +14,34 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const onButtonClick = () => {
-  };
+  const [login, { error, data }] = useMutation(LOGIN);
+
+  const onButtonClick = async () => {
+    try {
+      // send login data to backend
+      const { data } = await login({
+        variables: { email, password }
+      })
+
+      console.log(data);
+
+      const token = data?.login.token || '';
+
+      // save token data on frontend
+      auth.login(token);
+
+      // clear out signup form
+      setFormState()
+    }
+    catch (err) {
+      console.log(err);
+    }
+  }
+
+  const setFormState = () => {
+    setEmail("")
+    setPassword("")
+  }
 
   return (
     <motion.div
