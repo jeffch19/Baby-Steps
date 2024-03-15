@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import '../css/navbar.css';
 
 export default function Navbar() {
     // const currentPage = useLocation().pathname;
     return (
-        <div className='bg-rose-100 height-[4vh] flex justify-between'>
+        <div className='bg-amber-50 border border-lightblue flex justify-center'>
             <ul className='flex justify-between'>
                 <li>
                     <Link to="/" className='mx-2'>Home</Link>
