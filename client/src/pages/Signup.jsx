@@ -15,13 +15,16 @@ const Signup = () => {
   const [date, setDate] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
   const [passwordError, setPasswordError] = useState('');
 
   const [signup, { error, data }] = useMutation(ADD_USER);
 
-  const onButtonClick = async () => {
+  const onButtonClick = async (event) => {
+    event.preventDefault();
+
+    if (passwordError !== "") return;
+
     try {
       // send login data to backend
       const { data } = await signup({
@@ -51,9 +54,7 @@ const setFormState = () => {
   setConfirmPassword("")
 }
 
-const validatePasswords = () => {
-  console.log(`password: ${password}, confirmPassword: ${confirmPassword}`)
-
+const validatePasswords = (confirmPassword) => {
   if (confirmPassword !== "" && password !== confirmPassword) {
     setPasswordError("Passwords do not match. Try again.")
   }
@@ -74,7 +75,7 @@ return (
         className="sm:max-w-sm sm:w-full px-6 py-8 h-screen w-screen md:h-auto"
         id="card"
       >
-        <div class="flex flex-auto flex-col">
+        <div className="flex flex-auto flex-col">
           <div className="flex flex-auto flex-row flex-nowrap justify-center content-center header">
             <img src={bouquet} className="header"></img>
             <div className="flex flex-auto flex-col justify-center content-center">
@@ -94,7 +95,7 @@ return (
         </div>
 
         <div className="mt-10" id="interact">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6" action="#" method="POST" onSubmit={onButtonClick}>
             <div>
               <div className="flex items-center justify-between">
                 <label
@@ -199,9 +200,8 @@ return (
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                   onChange={
-                    value => {setConfirmPassword(value.target.value) ;
-                    console.log(confirmPassword) ;
-                    validatePasswords()
+                    value => {
+                      validatePasswords(value.target.value);
                   }}
                 />
               </div>
@@ -214,9 +214,8 @@ return (
 
             <div>
               <button
-                type="button"
+                type="submit"
                 className="flex w-full justify-center rounded-md px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 blue"
-                onClick={onButtonClick}
               >
                 Sign up
               </button>
