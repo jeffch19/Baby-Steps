@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useQuery } from '@apollo/client';
 import { GET_USER_AND_JOURNAL } from "../graphql/queries";
-import JournalViewCard from '../components/JournalViewCard';
+import JournalViewCard from '../components/JournalViewCard'; // Assuming you have a separate component for the journal entry card
 
 function JournalView() {
     const { loading, data } = useQuery(GET_USER_AND_JOURNAL,)
@@ -13,7 +13,7 @@ function JournalView() {
     console.log(data)
 
 
-    const  journalEntries  = data?.user.journel; 
+    const journalEntries = data?.user.journel;
 
     return (
         <motion.div
@@ -21,14 +21,12 @@ function JournalView() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, duration: 0.3 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}>
-            <div className="journal-view-container">
-                <h1 className="text-3x1 font-bold text-center mb-4">Journal Entries</h1>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                    {journalEntries.map((entry) => (
-                        <JournalViewCard key={entry.id} entry={entry} />
+            <h1>My Journal</h1>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {journalEntries.map((entry) => (
+                    <JournalViewCard key={entry.id} entry={entry} />
                 ))}
-                </div>
-            </div>    
+            </div>
         </motion.div>
     )
 }
