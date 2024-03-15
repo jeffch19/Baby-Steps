@@ -1,6 +1,8 @@
 import { ADD_Journel } from "../graphql/mutations";
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom';
+
 
 export default function JournalCard() {
     const [formState, setFormState] = useState({
@@ -54,7 +56,9 @@ export default function JournalCard() {
                 </div>
                 <textArea className='w-full bg-white' name='body' placeholder='Type thoughts/events here...' rows='8' onChange={handleChange}/>
                 <button type='submit' onClick={handleFormSubmit}>Submit</button>
+                
             </form>
+            <button><Link to='/journalview'>To journal view</Link></button>
         </div>
     )
 }
