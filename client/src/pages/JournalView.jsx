@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_USER_AND_JOURNAL } from "../graphql/queries";
-import JournalViewCard from '../components/JournalViewCard'; // Assuming you have a separate component for the journal entry card
+import JournalViewCard from '../components/JournalViewCard';
 
 function JournalView() {
     const{loading, data} = useQuery(GET_USER_AND_JOURNAL,)
@@ -15,9 +15,9 @@ function JournalView() {
 
     return (
         <>
-            <div>
-                <h1>My Journal</h1>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="journal-view-container">
+                <h1 className="text-3x1 font-bold text-center mb-4">Journal Entries</h1>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                     {journalEntries.map((entry) => (
                         <JournalViewCard key={entry.id} entry={entry} />
                     ))}
