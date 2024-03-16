@@ -14,7 +14,7 @@ const typeDefs = `
         image: String
         trimester: String
         month: String
-        babyWeight: Int
+        babyWeight: String
         user: User
     }
 
@@ -30,7 +30,7 @@ const typeDefs = `
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
-        addJournel(title: String!, body: String!, date: String!, image: String, trimester: String, month: String, babyWeight: Int): Journel
+        addJournel(title: String!, body: String!, date: String!, image: String, trimester: String, month: String, babyWeight: String): Journel
         login(email: String!, password: String!): Auth
     }
 `;

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function JournalCard() {
     const [formState, setFormState] = useState({
-        title: '', date: '', weight: '', months: '', body: ''
+        title: '', date: '', weight: '', month: '', body: '', trimester: ''
     });
     const [submission, { error }] = useMutation(ADD_Journel);
 
@@ -19,7 +19,7 @@ export default function JournalCard() {
             });
             console.log(data);
             setFormState({
-                title: '', date: '', weight: '', months: '', body: ''
+                title: '', date: '', babyWeight: '', month: '', body: '', trimester: ''
             });
         }
         catch (e) {
@@ -39,11 +39,11 @@ export default function JournalCard() {
                 <div className='flex flex-col'>
                     <input className="my-2 bg-white" name='title' placeholder='Title' onChange={handleChange}></input>
                     <input className="my-2 bg-white" name='date' placeholder='Date' onChange={handleChange}></input>
-                    <input className="my-2 bg-white" name='weight' placeholder='Weight' onChange={handleChange}></input>
+                    <input className="my-2 bg-white" name='babyWeight' placeholder='Weight' onChange={handleChange}></input>
                     {/* <input list='months'></input> */}
-                    <select name='months' className='bg-white my-2 text-black' onChange={handleChange}>
+                    <select name='month' className='bg-white my-2 text-black' onChange={handleChange}>
                         <option value='' disabled selected>Select a month</option>
-                        <option value="1">1</option>
+                        <option value='1'>1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -53,8 +53,14 @@ export default function JournalCard() {
                         <option value="8">8</option>
                         <option value="9">9</option>
                     </select>
+                    <select name='trimester' className='bg-white my-2 text-black' onChange={handleChange}>
+                        <option value='' disabled selected>Select a trimester</option>
+                        <option value='1'>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
                 </div>
-                <textArea className='w-full bg-white' name='body' placeholder='Type thoughts/events here...' rows='8' onChange={handleChange}/>
+                <textarea className='w-full bg-white' name='body' placeholder='Type thoughts/events here...' rows='8' onChange={handleChange}/>
                 <button type='submit' onClick={handleFormSubmit}>Submit</button>
                 
             </form>

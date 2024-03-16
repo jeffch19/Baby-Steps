@@ -25,7 +25,7 @@ const journelSchema = new Schema({
         type: String
     },
     babyWeight: {
-        type: Number
+        type: String
     },
     user: {
         type: Schema.Types.ObjectId,
