@@ -21,6 +21,7 @@
  /* Additional styles for text */
  .mainpage h1 {
    margin-top: 0;
+   padding: 5px;
    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive; 
    font-size: 40px; /* Example font size */
    font-weight: bolder;
@@ -28,11 +29,11 @@
 }
  
  .mainpage h2 {
-   margin-top: -70px;
+   margin-top: 10px;
    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive; 
    font-weight: bolder;
    font-size: x-large;
-   color: steelblue;
+   color: palevioletred;
 }
 
  .mainpage p {

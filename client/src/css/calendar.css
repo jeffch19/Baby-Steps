@@ -1,0 +1,125 @@
+/* calendar.css */
+
+/* Styling for bouquet images */
+
+.banner {
+    background-color: white; /* Background color of the banner */
+    border-color: lightpink;
+    padding: 0; /* Adjust as needed */
+    padding-bottom: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.banner:hover {
+    border-color: initial;
+}
+
+.banner:hover {
+    border-color: steelblue;
+}
+  
+h1 {
+    margin: 0; /* Reset default margin for h1 */
+    padding: 0;
+}
+
+.bouquet-icon {
+    position: absolute;
+    top: 0;
+}
+
+.bouquet-icon:first-child {
+    left: 320px; /* Adjust as needed */
+    width: 100px;
+    margin-top: -10px;
+}
+
+.bouquet-icon:last-child {
+    right: 320px; /* Adjust as needed */
+    width: 100px;
+    margin-top: -10px;
+}
+
+.text-center button{
+    background-color: transparent;
+    height: 20px;
+}
+
+.text-center button:hover {
+    border-color: transparent;
+}
+
+.logo {
+    background: hover;
+}
+
+.logo:hover {
+    border-color: initial;
+}
+
+.logo:hover {
+    border-color: transparent;
+}
+
+.kicks {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+button[name="reset"] {
+    color: red;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+}
+
+/* Styling Text */
+
+.mainpage h1 {
+    font-size: 40px;
+}
+  
+/* Styling for calendar component */
+.react-calendar {
+    margin-top: 20px;
+}
+  
+.mainpage h2 {
+    font-size: 36px;
+    margin-top: 60px;
+}
+
+/* CSS styles for screens up to 540px wide */
+@media (max-width: 540px) {
+    .mainpage {
+        width: 100%;
+        padding: 10px;
+    }
+    .mainpage h1 {
+        font-size: 28px;
+    }
+  
+    .mainpage h2 {
+        font-size: 28px;
+        margin-top: 60px;
+    }
+
+    .bouquet-icon:first-child {
+        left: 230px; /* Adjust as needed */
+        width: 60px;
+    }
+    
+    .bouquet-icon:last-child {
+        right: 230px; /* Adjust as needed */
+        width: 60px;
+    }
+
+    .img.mx-auto {
+        width: 100px;
+    }
+}
