@@ -16,7 +16,7 @@ export function CloudButton(){
   } 
 return (
   <button onClick={openWidget} type="submit" className={`Cloud`}>
-  Submit
+  Upload Image
   </button>
 )
 }
