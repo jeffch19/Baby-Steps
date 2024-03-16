@@ -12,7 +12,6 @@ import bouquet from "../assets/bouquetRight.png";
 
 const Signup = () => {
   const [name, setName] = useState('');
-  const [date, setDate] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -48,7 +47,6 @@ const Signup = () => {
 
 const setFormState = () => {
   setName("")
-  setDate("")
   setEmail("")
   setPassword("")
   setConfirmPassword("")
@@ -70,16 +68,16 @@ return (
     exit={{ opacity: 0, duration: 0.3 }}
     transition={{ duration: 0.5, ease: "easeOut" }}
   >
-    <div className="flex justify-center items-center h-screen">
+    <div className="grid h-screen place-items-center">
       <div
-        className="sm:max-w-sm sm:w-full px-6 py-8 h-screen w-screen md:h-auto"
+        className="w-96 px-4 py-4"
         id="card"
       >
         <div className="flex flex-auto flex-col">
           <div className="flex flex-auto flex-row flex-nowrap justify-center content-center header">
             <img src={bouquet} className="header"></img>
             <div className="flex flex-auto flex-col justify-center content-center">
-              <h2 className="text-center align-middle text-3xl font-bold leading-9 tracking-tight text-gray-900 header">
+              <h2 className="text-center align-middle text-2xl font-bold leading-9 tracking-tight text-gray-900 header">
                 Sign Up
               </h2>
             </div>
@@ -94,8 +92,8 @@ return (
           />
         </div>
 
-        <div className="mt-10" id="interact">
-          <form className="space-y-6" action="#" method="POST" onSubmit={onButtonClick}>
+        <div className="mt-2" id="interact">
+          <form className="space-y-2" action="#" method="POST" onSubmit={onButtonClick}>
             <div>
               <div className="flex items-center justify-between">
                 <label
@@ -105,7 +103,7 @@ return (
                   Name
                 </label>
               </div>
-              <div className="mt-2">
+              <div className="mt-1">
                 <input
                   id="name"
                   name="name"
@@ -114,27 +112,6 @@ return (
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                   onChange={(value) => setName(value.target.value)}
-                />
-              </div>
-            </div>
-
-            <div>
-              <div className="flex items-center justify-between">
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Date
-                </label>
-              </div>
-              <div className="mt-2">
-                <input
-                  id="date"
-                  name="date"
-                  type="date"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
-                  onChange={value => setDate(value.target.value)}
                 />
               </div>
             </div>
@@ -164,7 +141,6 @@ return (
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium leading-6 text-gray-900"
-                  onChange={value => setPassword(value.target.value)}
                 >
                   Password
                 </label>

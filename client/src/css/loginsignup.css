@@ -14,16 +14,16 @@ input {
 
 div.header {
     background-color: #e4e8d9;
-    width: 80%;
-    left: 10%;
+    width: 60%;
+    left: 20%;
     position: relative;
 }
 
 img.header {
-    width: 6rem;
+    width: 5rem;
     object-fit: scale-down;
-    margin-left: -4rem;
-    margin-right: -4rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
 }
 
 img.header#flipped {
@@ -31,7 +31,7 @@ img.header#flipped {
 }
 
 .logo {
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 6rem;
     height: auto;
 }
@@ -40,7 +40,8 @@ img.header#flipped {
     background-color: #fefef4;
     border: #abc1d6 0.20rem solid;
     border-radius: 1rem;
-    position: relative;
+    height: min-content;
+    margin-top: -9rem;
 }
 
 a.blue {
