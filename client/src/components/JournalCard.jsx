@@ -1,10 +1,11 @@
 import { ADD_Journel } from "../graphql/mutations";
-import { useState } from 'react';
+import { useState, createContext, useEffect } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 
 
 export default function JournalCard() {
+    const CloudinaryScriptContext = createContext()
     const [formState, setFormState] = useState({
         title: '', date: '', weight: '', month: '', body: '', trimester: ''
     });
