@@ -21,11 +21,15 @@ function JournalView() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, duration: 0.3 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}>
-            <h1>My Journal</h1>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {journalEntries.map((entry) => (
-                    <JournalViewCard key={entry.id} entry={entry} />
-                ))}
+            <div className='grid-container' style={{ maxHeight: "calc(100vh - 120px)", overflowY: "auto" }}>
+                <div className='text-center'>
+                    <h1 className='text-4xl font-lucida-calligraphy font-bold mb-4 mt-5'>My Journal</h1>
+                </div>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 px-4">
+                    {journalEntries.map((entry) => (
+                        <JournalViewCard key={entry.id} entry={entry} />
+                    ))}
+                </div>
             </div>
         </motion.div>
     )

@@ -1,9 +1,10 @@
 import React from 'react';
+import '../css/journalview.css';
 
 const JournalViewCard = ({ entry }) => {
   return (
-    <div className="max-w-md mx-auto bg-beige-100 shadow-md border border-green-200 rounded-lg overflow-hidden">
-      <div className="p-4 overflow-y-auto">
+    <div className="view max-w-md mx-auto px-4 py-2 bg-beige-100 shadow-md border rounded-lg">
+      <div className="p-2 h-[400px] overflow-y-auto my-4 mx-2">
         <h2 className="text-xl font-bold mb-2">{entry.title}</h2>
         <p className="text-black-600 mb-2">Date: {entry.date}</p>
         <p className="text-black-600 mb-2">Trimester: {entry.trimester}</p>
