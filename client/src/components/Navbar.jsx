@@ -4,7 +4,7 @@ import '../css/navbar.css';
 export default function Navbar() {
     // const currentPage = useLocation().pathname;
     return (
-        <div className='bg-amber-50 border border-lightblue flex justify-center'>
+        <div className='navbar h-[60px] flex justify-center items-center'>
             <ul className='flex justify-between'>
                 <li>
                     <Link to="/" className='mx-2'>Home</Link>

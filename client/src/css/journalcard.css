@@ -1,0 +1,46 @@
+h1 {
+    font-family: "Lucida Calligraphy", cursive;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+/* In your CSS file or Tailwind configuration */
+input {
+    background-color:  #fefef4;
+    border: 1px solid #a0aec0; /* Light blue border color */
+    padding: 0.5rem; /* Padding for better spacing */
+    border-radius: 0.25rem; /* Rounded corners */
+}
+
+select {
+    background-color:  #fefef4;
+    border: 1px solid #a0aec0; /* Light blue border color */
+    padding: 0.5rem; /* Padding for better spacing */
+    border-radius: 0.25rem; /* Rounded corners */
+}
+
+textarea {
+    background-color:  #fefef4;
+    border: 1px solid #a0aec0; /* Light blue border color */
+    padding: 0.5rem; /* Padding for better spacing */
+    border-radius: 0.25rem; /* Rounded corners */
+    color: black;
+}
+
+button {
+    border: 1px solid #a0aec0; /* Light blue border color */
+    padding: 0.5rem; /* Padding for better spacing */
+    margin-bottom: 6px;
+    border-radius: 0.25rem; /* Rounded corners */
+    color: black;
+}
+
+button[type='submit'] {
+    background-color: pink;
+}
+
+button {
+    background-color: lightblue;
+}

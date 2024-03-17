@@ -1,9 +1,6 @@
-/* Navbar Background */
-.bg-amber-50 {
-    background-color: #FFECB3; /* Example color */
-}
-
 /* Navbar Border */
-.border-lightblue {
-   border-bottom: 4px solid lightblue;
+.navbar {
+    background-color: #fefef4;
+    border-bottom: 4px solid lightblue;
+    color: steelblue;
 }
