@@ -86,15 +86,15 @@ button[name="reset"] {
 }
   
 /* Styling for calendar component */
-react-calendar {
-    background-color: #fefef4;
-    margin-top: 20px;
+.monthly-calendar {
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
   
 .mainpage h2 {
     font-size: 36px;
     margin-top: 70px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /* CSS styles for screens up to 540px wide */
@@ -129,5 +129,11 @@ react-calendar {
     .react-calendar {
         margin-top: 20px;
         margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .monthly-calendar {
+        margin-bottom: 40px;
     }
 }
