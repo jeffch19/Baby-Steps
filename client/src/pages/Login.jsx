@@ -59,7 +59,7 @@ const Login = () => {
           <div className="flex flex-auto flex-row flex-nowrap justify-center content-center header">
             <img src={bouquet} className="header"></img>
             <div className="flex flex-auto flex-col justify-center content-center">
-              <h2 className="text-center align-middle text-2xl font-bold leading-9 tracking-tight text-gray-900 header">
+              <h2 className="text-center align-middle text-3xl font-bold leading-9 tracking-tight text-gray-900 header">
                 Log In
               </h2>
             </div>
