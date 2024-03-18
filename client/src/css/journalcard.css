@@ -2,7 +2,7 @@ h1 {
     font-family: "Lucida Calligraphy", cursive;
     font-size: 50px;
     font-weight: bolder;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
   }
   
@@ -34,13 +34,13 @@ button {
     padding: 0.5rem; /* Padding for better spacing */
     margin-bottom: 6px;
     border-radius: 0.25rem; /* Rounded corners */
+    background-color: lightblue;
     color: black;
 }
 
 button[type='submit'] {
     background-color: pink;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-button {
-    background-color: lightblue;
-}

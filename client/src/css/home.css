@@ -28,12 +28,12 @@
    color: steelblue; /* Example text color */
 }
  
- .mainpage h2 {
+ div.babysteps {
    margin-top: 0;
    padding-top: 0;
    font-family: "Lucida Calligraphy", "Lucida Handwriting", cursive; 
    font-weight: bolder;
-   font-size: x-large;
+   font-size: 50px;
    color: palevioletred;
 }
 
@@ -63,6 +63,7 @@
 
   .mainpage h2 {
     margin-top: -50px;
+    font-size: xx-large;
   }
 
  .image-container {

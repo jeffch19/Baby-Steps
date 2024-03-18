@@ -10,7 +10,7 @@ export default function Journal() {
             exit={{ opacity: 0, duration: 0.3 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}>
             <div className='mainpage'>
-                <h1 className='text-black text-center pt-8'>Thoughts...</h1>
+                <h1 className='text-black text-center' style={{ marginTop: '20px' }}>Thoughts...</h1>
                 <JournalCard />
                 {/* <CloudButton /> */}
             </div>

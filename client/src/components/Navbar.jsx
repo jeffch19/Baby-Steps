@@ -13,7 +13,7 @@ export default function Navbar() {
                     <Link to="/journal" className='mx-2'>Journal</Link>
                 </li>
                 <li>
-                    <Link to="/calendar" className='mx-2'>Calendar</Link>
+                    <Link to="/calendar" className='mx-2'>Counter & Calendar</Link>
                 </li>
             </ul>
             <Link to='/login' className='mx-2'>Login</Link>
