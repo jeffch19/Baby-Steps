@@ -52,7 +52,7 @@ export default function JournalCard() {
         });
     };
     return (
-        <div className='mx-auto w-6/12 text-black my-3 h-[75vh]'>
+        <div className='mx-auto w-6/12 text-black my-3 '>
             <form onSubmit={handleFormSubmit}>
                 <div className='flex flex-col'>
                     <input className="my-2" name='title' placeholder='Title' onChange={handleChange}></input>
