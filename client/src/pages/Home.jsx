@@ -13,9 +13,10 @@ export default function Home() {
             exit={{ opacity: 0, duration: 0.3 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}>
             <div className='mainpage' style={{ backgroundImage: `url(${Background})` }}>
-                <h2 className='text-black text-center font-lucida-calligraphy'>Baby Steps</h2>
-                <h1 className='text-black text-center pt-8'>My Pregnancy Journal</h1>
-                <p className='text-black text-center'>Every moment, a precious keepsake.</p>
+                <div className='babysteps text-4x1 text-black text-center font-lucida-calligraphy'>Baby Steps
+                </div>
+                    <h1 className='text-black text-center pt-8'>Pregnancy Journal</h1>
+                    <p className='text-black text-center'>Every moment, a precious keepsake.</p>
                 <div className="image-container">
                     <img src={Grouped} alt="Group of Icons" className="grouped" />
                 </div>

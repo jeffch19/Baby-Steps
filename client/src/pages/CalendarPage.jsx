@@ -49,7 +49,7 @@ export default function CalendarPage() {
                         {/* Logo button (BabySteps Logo) */}
                         <div className="text-center mt-4">
                             <button className="focus:outline-none" onClick={incrementLogoCount}>
-                                <img src={babystepsLogo} alt="BabySteps Logo" className="logo mx-auto" />Tap the baby to count kicks.
+                                <img src={babystepsLogo} alt="BabySteps Logo" className="logo mx-auto" />Tap the baby to keep a count of kicks.
                             </button>
 
                             {/* Display logo count */}

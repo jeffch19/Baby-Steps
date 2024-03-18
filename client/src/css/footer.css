@@ -14,13 +14,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bolder;
   }
   
   .footer-text {
     margin: 0 10px; /* Adjust the spacing between text and images */
-    font-size: 16px;
+    font-size: 14px;
     color: steelblue;
 
  }
