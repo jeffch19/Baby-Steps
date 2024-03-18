@@ -1,6 +1,6 @@
 import React from 'react';
 import Background from "../assets/pastelBackground.png";
-import Grouped from "../assets/grouped.png";
+import Grouped from "../assets/groupimage.png";
 import '../css/home.css';
 import { motion } from 'framer-motion';
 
