@@ -59,7 +59,7 @@ export default function JournalCard() {
                     <input className="my-2" name='date' placeholder='Date' onChange={handleChange}></input>
                     <input className="my-2" name='babyWeight' placeholder='Weight' onChange={handleChange}></input>
                     {/* <input list='months'></input> */}
-                    <select name='month' className='my-2 text-black' onChange={handleChange}>
+                    <select name='month' className='my-2 h-12 text-black' onChange={handleChange}>
                         <option value='' disabled selected>Select a month</option>
                         <option value='1'>1</option>
                         <option value="2">2</option>
@@ -71,7 +71,7 @@ export default function JournalCard() {
                         <option value="8">8</option>
                         <option value="9">9</option>
                     </select>
-                    <select name='trimester' className='my-2 text-black' onChange={handleChange}>
+                    <select name='trimester' className='my-2 h-12 text-black' onChange={handleChange}>
                         <option value='' disabled selected>Select a trimester</option>
                         <option value='1'>1</option>
                         <option value="2">2</option>
