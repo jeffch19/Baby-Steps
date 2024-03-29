@@ -108,8 +108,8 @@ button[name="reset"] {
     }
   
     .mainpage h2 {
-        font-size: 28px;
-        margin-top: 50px;
+        font-size: 22px;
+        margin-top: 30px;
     }
 
     .bouquet-icon:first-child {
@@ -127,7 +127,7 @@ button[name="reset"] {
     }
 
     .react-calendar {
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 30px;
     }
 }
