@@ -1,15 +1,21 @@
+.mainpage { 
+    display: flex;
+    justify-content: center; /* Center the boxes horizontally */
+}
+
 h1 {
     font-family: "Lucida Calligraphy", cursive;
     font-size: 50px;
     font-weight: bolder;
     margin-top: 40px;
     margin-bottom: 20px;
-  }
+}
   
 /* In your CSS file or Tailwind configuration */
 input {
     background-color:  #fefef4;
     border: 1px solid #a0aec0; /* Light blue border color */
+    box-shadow: 0 4px 4px lightblue;
     padding: 0.5rem; /* Padding for better spacing */
     border-radius: 0.25rem; /* Rounded corners */
 }
@@ -19,13 +25,24 @@ select {
     border: 1px solid #a0aec0; /* Light blue border color */
     padding: 0.5rem; /* Padding for better spacing */
     border-radius: 0.25rem; /* Rounded corners */
+    box-shadow: 0 4px 4px lightblue;
+    color: #A0AEC0;
 }
 
+.month {
+    color: #A0AEC0; /* Placeholder text color */
+}
+  
+.trimester {
+    color: #A0AEC0; /* Placeholder text color */
+}
+  
 textarea {
     background-color:  #fefef4;
     border: 1px solid #a0aec0; /* Light blue border color */
     padding: 0.5rem; /* Padding for better spacing */
     border-radius: 0.25rem; /* Rounded corners */
+    box-shadow: 0 4px 4px lightblue;
     color: black;
 }
 
@@ -34,7 +51,6 @@ button {
     padding: 0.5rem; /* Padding for better spacing */
     margin-bottom: 6px;
     border-radius: 0.25rem; /* Rounded corners */
-    background-color: lightblue;
     color: black;
 }
 
